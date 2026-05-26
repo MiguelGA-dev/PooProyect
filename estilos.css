@@ -1,0 +1,377 @@
+/* ============================================================
+   TESE | Posgrados — Hoja de Estilos Global
+   Paleta: rojo institucional, azul claro de acento
+   ============================================================ */
+
+/* Variables de color y tipografía */
+:root {
+  --rojo:      #8B0000;
+  --azul-nav:  #A9CCE3;
+  --gris-txt:  #333333;
+  --blanco:    #ffffff;
+  --gris-bg:   #f9f9f9;
+  --borde:     #dddddd;
+  --sombra:    rgba(0, 0, 0, 0.08);
+}
+
+/* Reset básico */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--gris-txt);
+  background: var(--blanco);
+}
+
+/* ── HEADER ── */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  border-bottom: 1px solid var(--borde);
+}
+
+.header-logos { display: flex; gap: 16px; align-items: center; }
+.header-logos img { height: 75px; object-fit: contain; }
+
+.header-titulo h1 {
+  color: var(--rojo);
+  font-size: 1.4rem;
+  text-align: right;
+  line-height: 1.3;
+}
+
+/* ── NAVEGACIÓN ── */
+nav {
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  background: var(--blanco);
+  box-shadow: 0 2px 6px var(--sombra);
+}
+
+.btn-posgrados {
+  background: var(--rojo);
+  color: var(--blanco);
+  padding: 12px 16px;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-right: 20px;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.btn-posgrados:hover { background: #6a0000; }
+
+.nav-links { display: flex; list-style: none; flex-grow: 1; }
+.nav-links li { border: 1px solid #000; }
+.nav-links a {
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: var(--gris-txt);
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.nav-links a:hover,
+.nav-links li.activo a { background: var(--azul-nav); }
+
+/* ── BANNER ── */
+.banner {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── SECCIÓN GENÉRICA ── */
+.seccion {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+.seccion h2 { font-size: 1.9rem; margin-bottom: 16px; }
+.seccion p  { font-size: 1.1rem; line-height: 1.7; }
+
+/* ── ENCABEZADO DE PROGRAMA (banner rojo con título) ── */
+.programa-titulo {
+  background: var(--rojo);
+  color: var(--blanco);
+  padding: 12px 5%;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* ── ACORDEÓN ── */
+.acordeon-item { border-bottom: 1px solid var(--borde); }
+
+.acordeon-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 16px 5%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.2s;
+}
+.acordeon-btn:hover { background: var(--gris-bg); }
+.acordeon-btn .flecha { font-size: 0.8rem; transition: transform 0.25s; }
+.acordeon-btn.abierto .flecha { transform: rotate(180deg); }
+
+.acordeon-contenido {
+  display: none;
+  padding: 20px 5%;
+  background: var(--gris-bg);
+  text-align: left;
+}
+.acordeon-contenido.visible { display: block; }
+
+/* ── TABLA DE PLAN DE ESTUDIOS ── */
+.tabla-plan {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+.tabla-plan th {
+  background: var(--rojo);
+  color: var(--blanco);
+  padding: 10px 14px;
+  text-align: left;
+}
+.tabla-plan td { padding: 9px 14px; border-bottom: 1px solid var(--borde); }
+.tabla-plan tr:hover td { background: #fef2f2; }
+
+/* ── CARDS DE OFERTA EDUCATIVA ── */
+.oferta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+  padding: 40px 5%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.programa-card {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--gris-txt);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.programa-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px var(--sombra);
+}
+.programa-card img {
+  width: 120px;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+.programa-card h3 { font-size: 0.95rem; line-height: 1.4; }
+
+/* ── NÚCLEO ACADÉMICO ── */
+.docente-card {
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  padding: 18px;
+  margin-bottom: 18px;
+  background: var(--blanco);
+}
+.docente-card h4 { color: var(--rojo); margin-bottom: 6px; }
+.docente-card p  { font-size: 0.9rem; line-height: 1.6; }
+.docente-card a  { color: var(--rojo); }
+
+/* ── REDES SOCIALES ── */
+.social-seccion { text-align: center; margin: 48px 0 30px; }
+.social-seccion h3 { margin-bottom: 16px; font-size: 1.1rem; }
+
+.social-iconos {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.social-iconos a {
+  color: var(--gris-txt);
+  font-size: 1.6rem;
+  border: 2px solid #000;
+  padding: 10px 13px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.social-iconos a:hover { background: var(--rojo); color: var(--blanco); border-color: var(--rojo); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--blanco);
+  padding: 36px 5%;
+  border-top: 1px solid var(--borde);
+}
+footer strong { font-size: 1.05rem; display: block; margin-bottom: 8px; }
+footer p { font-size: 0.95rem; line-height: 1.9; }
+
+/* ── PORTAL ESTUDIANTES ── */
+.login-wrapper {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 40px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  text-align: center;
+}
+.login-wrapper h2 { margin-bottom: 24px; color: var(--rojo); }
+
+.campo-form { margin-bottom: 18px; text-align: left; }
+.campo-form label { display: block; font-weight: 600; margin-bottom: 6px; }
+.campo-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.btn-entrar {
+  background: var(--rojo);
+  color: var(--blanco);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-entrar:hover { background: #6a0000; }
+
+/* Nav interna del portal */
+.portal-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 5%;
+  background: var(--blanco);
+  border-bottom: 2px solid var(--borde);
+  flex-wrap: wrap;
+}
+.portal-nav a {
+  padding: 14px 18px;
+  text-decoration: none;
+  color: var(--gris-txt);
+  font-weight: 500;
+  border-right: 1px solid var(--borde);
+  transition: background 0.2s;
+}
+.portal-nav a:hover,
+.portal-nav a.activo { background: var(--azul-nav); }
+
+.btn-cerrar-sesion {
+  margin-left: auto;
+  background: none;
+  border: 1px solid var(--rojo);
+  color: var(--rojo);
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-cerrar-sesion:hover { background: var(--rojo); color: var(--blanco); }
+
+/* Tabla historial académico */
+.tabla-historial {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+.tabla-historial th {
+  background: var(--rojo);
+  color: var(--blanco);
+  padding: 10px 12px;
+  text-align: left;
+}
+.tabla-historial td { padding: 9px 12px; border-bottom: 1px solid var(--borde); }
+.tabla-historial tr:hover td { background: #fef2f2; }
+
+/* Datos generales del alumno */
+.datos-generales {
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: start;
+}
+.datos-generales p { line-height: 2; font-size: 0.95rem; }
+.datos-generales strong { color: var(--rojo); }
+.foto-alumno {
+  width: 90px;
+  height: 90px;
+  border: 2px solid var(--borde);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: #aaa;
+  background: var(--gris-bg);
+}
+
+/* Contenedor general de secciones del portal */
+.portal-contenido {
+  max-width: 1000px;
+  margin: 32px auto;
+  padding: 0 5%;
+}
+.portal-contenido h2 {
+  font-size: 1.4rem;
+  color: var(--rojo);
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--borde);
+  padding-bottom: 8px;
+}
+
+/* Convocatoria */
+.convocatoria-img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 24px;
+  border: 1px solid var(--borde);
+}
+.tabla-conv {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+  margin-top: 10px;
+}
+.tabla-conv th {
+  background: var(--rojo);
+  color: var(--blanco);
+  padding: 10px 14px;
+  font-style: italic;
+}
+.tabla-conv td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--borde);
+  vertical-align: top;
+}
+.tabla-conv tr:nth-child(even) td { background: var(--gris-bg); }
