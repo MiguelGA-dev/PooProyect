@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TESE | Semestre Actual</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+  <nav class="portal-nav">
+    <a href="portal_inicio.html">Inicio</a>
+    <a href="portal_historial.html">Historial Académico</a>
+    <a href="portal_semestre.html" class="activo">Semestre Actual</a>
+    <a href="#">Reinscripción</a>
+    <a href="#">Titulación</a>
+    <button id="btn-cerrar-sesion" class="btn-cerrar-sesion">⏻ Cerrar Sesión</button>
+  </nav>
+
+  <div class="portal-contenido">
+
+    <!-- Calificaciones parciales del semestre en curso -->
+    <h2>Calificaciones — Ago-Dic 2026</h2>
+    <table class="tabla-historial">
+      <thead>
+        <tr>
+          <th>Período</th><th>Clave</th><th>Nombre</th><th>Grupo</th>
+          <th>1er Parcial</th><th>2do Parcial</th><th>3er Parcial</th><th>Promedio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ago-Dic 2026</td>
+          <td>MCTI-301</td>
+          <td>Seminario de Tesis I</td>
+          <td>MCTI-301-A</td>
+          <td>—</td><td>—</td><td>—</td><td>—</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Horario de clases -->
+    <h2 style="margin-top:36px;">Horarios</h2>
+    <table class="tabla-historial">
+      <thead>
+        <tr>
+          <th>Materia</th><th>Profesor</th><th>Grupo</th>
+          <th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th>
+          <th>Salón</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Seminario de Tesis I</td>
+          <td>Dr. Juan Pérez García</td>
+          <td>MCTI-301-A</td>
+          <td>17:00-19:00</td><td>—</td>
+          <td>17:00-19:00</td><td>—</td><td>—</td>
+          <td>M-01</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Tira de materias -->
+    <h2 style="margin-top:36px;">Tira de Materias</h2>
+    <div style="border:1px solid #ddd; border-radius:6px; padding:20px; background:#f9f9f9;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:16px; font-size:0.9rem;">
+        <p><strong>Matrícula:</strong> M21010001</p>
+        <p><strong>Período:</strong> Ago-Dic 2026</p>
+        <p><strong>Nombre:</strong> María López Hernández</p>
+        <p><strong>Fecha:</strong> 24/08/2026</p>
+        <p><strong>Carrera:</strong> M. en C. en T.I.</p>
+        <p><strong>Créditos Inscritos:</strong> 8</p>
+      </div>
+      <table class="tabla-historial">
+        <thead>
+          <tr>
+            <th>Clave</th><th>Nombre de la Materia / Profesor</th>
+            <th>Créditos</th><th>Salón</th><th>Lun</th><th>Mar</th><th>Mié</th><th>Jue</th><th>Vie</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>MCTI-301</td>
+            <td>Seminario de Tesis I<br><small>Dr. Juan Pérez García</small></td>
+            <td>8</td>
+            <td>M-01</td>
+            <td>17-19</td><td>—</td><td>17-19</td><td>—</td><td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div><!-- /portal-contenido -->
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

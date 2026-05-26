@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TESE | Historial Académico</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+  <nav class="portal-nav">
+    <a href="portal_inicio.html">Inicio</a>
+    <a href="portal_historial.html" class="activo">Historial Académico</a>
+    <a href="portal_semestre.html">Semestre Actual</a>
+    <a href="#">Reinscripción</a>
+    <a href="#">Titulación</a>
+    <button id="btn-cerrar-sesion" class="btn-cerrar-sesion">⏻ Cerrar Sesión</button>
+  </nav>
+
+  <div class="portal-contenido">
+    <h2>Historial Académico</h2>
+
+    <!-- Tabla con materias cursadas -->
+    <table class="tabla-historial">
+      <thead>
+        <tr>
+          <th>Clave</th>
+          <th>Créditos</th>
+          <th>Nombre de la Asignatura</th>
+          <th>Calificación</th>
+          <th>Grupo</th>
+          <th>Período</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>MCTI-101</td>
+          <td>8</td>
+          <td>Métodos de Investigación</td>
+          <td>9.5</td>
+          <td>MCTI-101-A</td>
+          <td>Ago-Dic 2025</td>
+        </tr>
+        <tr>
+          <td>MCTI-102</td>
+          <td>8</td>
+          <td>Estadística Avanzada</td>
+          <td>9.0</td>
+          <td>MCTI-101-A</td>
+          <td>Ago-Dic 2025</td>
+        </tr>
+        <tr>
+          <td>MCTI-201</td>
+          <td>10</td>
+          <td>Aprendizaje Automático</td>
+          <td>8.8</td>
+          <td>MCTI-201-A</td>
+          <td>Ene-Jun 2026</td>
+        </tr>
+        <tr>
+          <td>MCTI-202</td>
+          <td>6</td>
+          <td>Seminario de Investigación I</td>
+          <td>9.0</td>
+          <td>MCTI-201-A</td>
+          <td>Ene-Jun 2026</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

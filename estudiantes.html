@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TESE | Estudiantes</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-logos">
+      <img src="../image/logo_edomex.png" alt="Gobierno del Estado de México">
+      <img src="../image/logo_tese.jpg"   alt="Logo TESE">
+    </div>
+    <div class="header-titulo">
+      <h1>Tecnológico de Estudios Superiores de Ecatepec</h1>
+    </div>
+  </header>
+
+  <nav>
+    <a href="../index.html" class="btn-posgrados">TESE | Posgrados</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="oferta.html">Oferta Educativa</a></li>
+      <li><a href="convocatoria.html">Convocatoria</a></li>
+      <li class="activo"><a href="estudiantes.html">Estudiantes</a></li>
+    </ul>
+  </nav>
+
+  <!-- Formulario de inicio de sesión -->
+  <div class="login-wrapper">
+    <h2>Acceso Estudiantes</h2>
+
+    <form id="form-login">
+      <div class="campo-form">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Número de control" required>
+      </div>
+      <div class="campo-form">
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+      </div>
+      <!-- Mensaje de error de credenciales -->
+      <p id="error-login" style="color:red; font-size:0.9rem; margin-bottom:12px;"></p>
+      <button type="submit" class="btn-entrar">Entrar</button>
+    </form>
+
+    <p style="margin-top:16px; font-size:0.85rem; color:#666;">
+      Demo: usuario <strong>alumno01</strong> / contraseña <strong>1234</strong>
+    </p>
+  </div>
+
+  <footer>
+    <strong>Contacto</strong>
+    <p>
+      Tecnológico de Estudios Superiores de Ecatepec<br>
+      Av. Tecnológico s/n, Col. Valle de Anáhuac, Sección Fuentes, C.P. 55210<br>
+      Ecatepec de Morelos, Estado de México — Tel: (55) 5000 2399<br>
+      tese.contacto@tese.edu.mx
+    </p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
